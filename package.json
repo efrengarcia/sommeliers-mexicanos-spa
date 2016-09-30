@@ -1,0 +1,15 @@
+{
+  "name": "sommeliers-mexicanos-spa",
+  "version": "0.0.1",
+  "description": "Single page app para la administracion del sitio Sommeliers Mexicanos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Efren Garcia",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1"
+  }
+}
