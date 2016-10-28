@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <h1 class="page-header">Bienvenido administrador</h1>
-      <tab-menu></tab-menu>
+
+      <div class="col-md-2 col-sm-2">
+        <tab-menu></tab-menu>
+      </div>
+
+      <div class="col-md-10 col-sm-10">
+        <generic-form></generic-form>
+      </div>
     </div>
 
     <!-- jQuery -->
@@ -18,10 +25,14 @@
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Angular -->
     <script src="../bower_components/angular/angular.min.js"></script>
+    <!-- Lodash -->
+    <script src="../bower_components/lodash/dist/lodash.min.js"></script>
 
     <!-- app -->
     <script src="js/app.module.js"></script>
     <script src="js/tab-menu/tab-menu.module.js"></script>
     <script src="js/tab-menu/tab-menu.component.js"></script>
+    <script src="js/generic-form/generic-form.module.js"></script>
+    <script src="js/generic-form/generic-form.component.js"></script>
   </body>
 </html>

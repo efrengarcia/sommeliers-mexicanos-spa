@@ -1,0 +1,97 @@
+<h3 class="page-header">{{$ctrl.titulo}}</h3>
+
+<div class="table-responsive">
+	<table class="table table-condensed table-condensed">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Propiedad 1</th>
+				<th>Propiedad 2</th>
+				<th>Propiedad 3</th>
+				<th class="col-md-1">
+					<button type="button" class="btn btn-xs btn-success" ng-click="$ctrl.comienzaCreacion();">
+						<span class="glyphicon glyphicon-plus"></span>
+					</button>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="registro in $ctrl.datos">
+				<td>{{registro.id}}</td>
+				<td>{{registro.propiedad1}}</td>
+				<td>{{registro.propiedad2}}</td>
+				<td>{{registro.propiedad3}}</td>
+				<td>
+					<div class="btn-group btn-group-xs" role="group" aria-label="...">
+						<button type="button" class="btn btn-xs btn-warning" ng-click="$ctrl.comienzaEdicion();$ctrl.ponRegistroEditado(registro);">
+							<span class="glyphicon glyphicon-edit"></span>
+						</button>
+						<button type="button" class="btn btn-xs btn-danger" ng-click="$ctrl.borrar(registro);">
+							<span class="glyphicon glyphicon-trash"></span>
+						</button>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div ng-if="$ctrl.creando">
+  <h4>Agrega un registro</h4>
+  <form class="form-horizontal" ng-submit="$ctrl.crear(registroNuevo);">
+    <div class="form-group">
+      <label for="propiedad1" class="col-sm-2 control-label">Propiedad 1</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="propiedad1" ng-model="registroNuevo.propiedad1">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="propiedad2" class="col-sm-2 control-label">Propiedad 2</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="propiedad2" ng-model="registroNuevo.propiedad2">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="propiedad3" class="col-sm-2 control-label">Propiedad 3</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="propiedad3" ng-model="registroNuevo.propiedad3">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-default" ng-click="$ctrl.cancelaCreacion();">Cancelar</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div ng-if="$ctrl.editando">
+  <h4>Editando registro {{$ctrl.registroEditado.propiedad1}}</h4>
+  <form class="form-horizontal" ng-submit="$ctrl.editar($ctrl.registroEditado);">
+    <div class="form-group">
+      <label for="propiedad1" class="col-sm-2 control-label">Propiedad 1</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="propiedad1" ng-model="$ctrl.registroEditado.propiedad1">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="propiedad2" class="col-sm-2 control-label">Propiedad 2</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="propiedad2" ng-model="$ctrl.registroEditado.propiedad2">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="propiedad3" class="col-sm-2 control-label">Propiedad 3</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="propiedad3" ng-model="$ctrl.registroEditado.propiedad3">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-default" ng-click="$ctrl.cancelaEdicion();">Cancelar</button>
+      </div>
+    </div>
+  </form>
+</div>

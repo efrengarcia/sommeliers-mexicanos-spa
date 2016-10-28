@@ -1,3 +1,4 @@
 angular.module('smApp', [
-    'tabMenu'
+    'tabMenu',
+    'genericForm'
 ]);

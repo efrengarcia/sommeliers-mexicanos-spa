@@ -1,7 +1,5 @@
-<div class="col-md-2 col-sm-2">
-  <div class="list-group">
-    <a ng-repeat="opcion in $ctrl.opciones" href="#{{opcion.url}}" ng-click="$ctrl.ponOpcionActual(opcion)" class="list-group-item" ng-class="{'active': $ctrl.esOpcionActual(opcion)}">
-      <span class="glyphicon {{opcion.glyph}}"></span> {{opcion.nombre}}
-    </a>
-  </div>
+<div class="list-group">
+  <a ng-repeat="opcion in $ctrl.opciones" href="#{{opcion.url}}" ng-click="$ctrl.ponOpcionActual(opcion)" class="list-group-item" ng-class="{'active': $ctrl.esOpcionActual(opcion)}">
+    <span class="glyphicon {{opcion.glyph}}"></span> {{opcion.nombre}}
+  </a>
 </div>

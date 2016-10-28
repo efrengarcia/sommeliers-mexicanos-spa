@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Efren Garcia",
+  "repository": {
+    "type" : "git",
+    "url": "https://github.com/efrengarcia/sommeliers-mexicanos-spa.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.17.0",
